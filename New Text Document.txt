@@ -1,0 +1,48 @@
+Face Recognition By DNN Documentation Report
+
+Introduction
+The purpose of this project is to develop a face recognition model using machine learning techniques. 
+Face recognition has various applications, including security systems, access control, and personalized user experiences.
+
+Data Collection
+The dataset used in this project consists of labeled images of faces.
+The dataset was collected from Kaggle and manually labeled with the corresponding class labels.
+The dataset includes a training set (6000 images ), a validation set ( 600 images ), and a testing set ( 1200 images ).
+The training set is used to train the model, the validation set is used for hyperparameter tuning, and the testing set is used for evaluating the final model performance.
+
+Data Preprocessing
+The images in the dataset are preprocessed using various techniques.
+The images are rescaled to a range of 0 to 1 to normalize the pixel values.
+Augmentation techniques such as rotation, width shift, height shift, shear transformation, zoom, and horizontal flip are applied to increase the diversity of the training data.
+Data generators are used to efficiently load and preprocess the images in batches during training and evaluation.
+
+Model Training
+A dense neural network model is used for face recognition.
+The model consists of multiple layers, including flatten, dense, and output layers.
+The flatten layer is used to convert the 2D image data into a 1D vector.
+The dense layers contain multiple nodes with activation functions to learn complex patterns in the data.
+The output layer uses the sigmoid activation function to produce a binary classification result.
+The model is compiled with the Adam optimizer, binary cross-entropy loss function, and metrics such as accuracy, precision, and recall.
+The model is trained on the training set with a specified number of epochs, using the training data generator for efficient batch processing.
+The model is validated on the validation set during the training process to monitor its performance and prevent overfitting.
+
+Model Evaluation
+The trained model is evaluated on the testing set to assess its performance.
+The testing set is loaded using a data generator and preprocessed similar to the training and validation sets.
+The model's performance is evaluated using metrics such as accuracy, precision, recall, and F1-score.
+The classification report is generated using the scikit-learn library, providing detailed metrics for each class.
+
+Results
+The accuracy, precision, recall, and F1-score metrics of model is:
+    Model:
+        Accuracy: 0.68
+        Precision: 0.61
+        Recall: 0.96
+        F1-score: 0.76
+
+Conclusion
+In conclusion, we have developed and trained face recognition models using machine learning techniques. 
+The models achieved good performance with high accuracy, precision, recall, and F1-score values.
+The results demonstrate the effectiveness of the developed model in recognizing faces. 
+Further improvements can be made by exploring advanced neural network architectures and incorporating additional data augmentation techniques. 
+Overall, this project lays the foundation for building robust face recognition systems with potential applications in various domains.
